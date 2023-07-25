@@ -1,6 +1,6 @@
 ### ToDo
 
-- [ ] Register User
+- [x] Register User
 
   - [x] Validate - name, email, password - with Mongoose
   - [x] Hash Password (with bcryptjs)
@@ -12,10 +12,10 @@
 - [x] Login User
 
   - [x] Validate - email, password - in controller
-  - [ ] If email or password is missing, throw BadRequestError
+  - [x] If email or password is missing, throw BadRequestError
   - [x] Find User
   - [x] Compare Passwords
-  - [ ] If no user or password does not match, throw UnauthenticatedError
+  - [x] If no user or password does not match, throw UnauthenticatedError
   - [x] If correct, generate Token
   - [x] Send Response with Token
 
