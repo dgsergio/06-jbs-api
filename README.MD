@@ -6,18 +6,18 @@
   - [x] Hash Password (with bcryptjs)
   - [x] Generate Token
   - [x] Send Response with Token
-  - [ ] Hash pasword in the moodel
-  - [ ] Generate Token with a fn in the model
+  - [x] Hash pasword in the model
+  - [x] Generate Token with a fn in the model
 
-- [ ] Login User
+- [x] Login User
 
-  - [ ] Validate - email, password - in controller
+  - [x] Validate - email, password - in controller
   - [ ] If email or password is missing, throw BadRequestError
-  - [ ] Find User
-  - [ ] Compare Passwords
+  - [x] Find User
+  - [x] Compare Passwords
   - [ ] If no user or password does not match, throw UnauthenticatedError
-  - [ ] If correct, generate Token
-  - [ ] Send Response with Token
+  - [x] If correct, generate Token
+  - [x] Send Response with Token
 
 - [ ] Mongoose Errors
 
