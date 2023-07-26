@@ -25,11 +25,11 @@
   - [x] Validation Errors
   - [x] Cast Error
 
-- [ ] Security
-  - [ ] helmet
-  - [ ] cors
-  - [ ] xss-clean
-  - [ ] express-rate-limit
+- [x] Security
+  - [x] helmet
+  - [x] cors
+  - [x] xss-clean
+  - [x] express-rate-limit
 
 Swagger UI
 

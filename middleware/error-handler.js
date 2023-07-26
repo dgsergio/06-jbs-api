@@ -6,7 +6,7 @@ const errorHandler = (err, req, res, next) => {
     return res.status(err.statusCode).json({ msg: err.message });
   }
   let respondErrors = {
-    msg: 'Something went wrong.',
+    msg: 'Something went wrong',
     code: StatusCodes.INTERNAL_SERVER_ERROR,
   };
 
@@ -14,12 +14,12 @@ const errorHandler = (err, req, res, next) => {
     const errors = Object.values(err.errors);
     const errorsMessages = errors.map((item) => item.message).join(', ');
     respondErrors.code = StatusCodes.BAD_REQUEST;
-    respondErrors.msg = `${respondErrors.msg} ${errorsMessages}.`;
+    respondErrors.msg = `${respondErrors.msg}: ${errorsMessages}`;
   }
 
   if (err.name === 'CastError') {
     respondErrors.code = StatusCodes.NOT_FOUND;
-    respondErrors.msg = `${respondErrors.msg} No item found with id: ${err.value}.`;
+    respondErrors.msg = `${respondErrors.msg}: No item found with id ${err.value}`;
   }
 
   if (err.code && err.code === 11000) {
@@ -27,7 +27,7 @@ const errorHandler = (err, req, res, next) => {
     respondErrors.msg = `${respondErrors.msg} ${err.keyValue.email} alredy exist in the DB. Do you want to login insted?`;
   }
 
-  return res.status(respondErrors.code).json({ msg: respondErrors.msg });
+  return res.status(respondErrors.code).json({ msg: respondErrors.msg + '.' });
 };
 
 module.exports = errorHandler;
