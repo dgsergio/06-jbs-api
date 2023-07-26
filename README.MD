@@ -19,11 +19,11 @@
   - [x] If correct, generate Token
   - [x] Send Response with Token
 
-- [ ] Mongoose Errors
+- [x] Mongoose Errors
 
-  - [ ] Validation Errors
-  - [ ] Duplicate (Email)
-  - [ ] Cast Error
+  - [x] Duplicate (Email)
+  - [x] Validation Errors
+  - [x] Cast Error
 
 - [ ] Security
   - [ ] helmet
