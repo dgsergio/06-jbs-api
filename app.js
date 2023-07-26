@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const jobsRoutes = require('./routes/jobs');
+const authorization = require('./middleware/authorization');
 const notFound = require('./middleware/not-found');
 const errorHandler = require('./middleware/error-handler');
 const connectDB = require('./db/connect');
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use('/api/v1/auth', authRoutes);
-app.use('/api/v1/jobs', jobsRoutes);
+app.use('/api/v1/jobs', authorization, jobsRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
